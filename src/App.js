@@ -1,10 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/home/Home';
+import MemberList from './pages/members/Members';
+import ScoreList from './pages/scores/Scores';
+import Component1 from './pages/comp/Component1';
+import Component2 from './pages/comp/Component2';
+import Component3 from './pages/comp/Component3';
+import Component4 from './pages/comp/Component4';
+import Component5 from './pages/comp/Component5';
+import Component6 from './pages/comp/Component6';
+
 
 function App() {
+  const appStyle = {
+    padding: '30px'
+  }
+
   return (
-    <div className="App">
-      
+    <div style={appStyle}>
+      <BrowserRouter>
+        <Routes>
+          <Route path={"/"} element={<Home />}></Route>
+          <Route path={"/components/1"} element={<Component1 />}></Route>
+          <Route path={"/components/2"} element={<Component2 />}></Route>
+          <Route path={"/components/3"} element={<Component3 />}></Route>
+          <Route path={"/components/4"} element={<Component4 />}></Route>
+          <Route path={"/components/5"} element={<Component5 />}></Route>
+          <Route path={"/components/6"} element={<Component6 />}></Route>
+
+          <Route path={"/members"} element={<MemberList />}></Route>
+          <Route path={"/scores"} element={<ScoreList />}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
