@@ -8,7 +8,8 @@ import Component3 from './pages/comp/Component3';
 import Component4 from './pages/comp/Component4';
 import Component5 from './pages/comp/Component5';
 import Component6 from './pages/comp/Component6';
-
+import AxiosEx1 from './pages/axios/Ex1';
+import AxiosEx2 from './pages/axios/Ex2';
 
 function App() {
   const appStyle = {
@@ -29,6 +30,9 @@ function App() {
 
           <Route path={"/members"} element={<MemberList />}></Route>
           <Route path={"/scores"} element={<ScoreList />}></Route>
+
+          <Route path={"/axios/1"} element={<AxiosEx1 />}></Route>
+          <Route path={"/axios/2"} element={<AxiosEx2 />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
